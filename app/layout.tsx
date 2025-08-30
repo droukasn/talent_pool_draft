@@ -1,8 +1,16 @@
-export const metadata = { title: 'TalentPilot — Talent Pool' } as const
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+import React from "react";
+
+export default function AdminLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en">
-      <body style={{ fontFamily: 'ui-sans-serif, system-ui', background: '#f8fafc' }}>{children}</body>
-    </html>
-  )
+    <div>
+      <header style={{ padding: 16, borderBottom: "1px solid #eee", marginBottom: 24 }}>
+        <h2>Admin: Experts Table</h2>
+      </header>
+      <main>{children}</main>
+    </div>
+  );
 }
